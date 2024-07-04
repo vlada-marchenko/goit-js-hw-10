@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Timer</title>
+  </head>
+  <body>
+<!--     <section>
+      <a href="./index.html">Go to home</a>
+      <h1>Welcome to page 2</h1>
+    </section> -->
+
+    <div class="countdown-container">
+      <input type="datetime-local" id="datetime-picker" class="datetime-input">
+      <button class="start-button" id="start-button"type="button" data-start> <span class="text">Start</span></button>
+      <div class="countdown-display">
+          <div class="time-section">
+              <span class="time" id="days">00</span>
+              <br> <span class="label">DAYS</span>
+          </div>
+          <div class="time-section">
+              <span class="time" id="hours">00</span>
+              <br> <span class="label">HOURS</span>
+          </div>
+          <div class="time-section">
+              <span class="time" id="minutes">00</span>
+              <br> <span class="label">MINUTES</span>
+          </div>
+          <div class="time-section">
+              <span class="time" id="seconds">00</span>
+              <br> <span class="label">SECONDS</span>
+          </div>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>\
+  <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+  <script src="/src/js/1-timer.js"></script>
+
+  </body>
+</html>
+
