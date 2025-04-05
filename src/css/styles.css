@@ -1,18 +1,412 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body { 
+  font-family: 'Montserrat';
+  letter-spacing: 0.04em !important;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+input {
+border: 1px solid #808080;
+border-radius: 4px;
+padding: 0px 0px 0px 16px;
+gap: 8px;
+
+width: 264px;
+height: 40px;
+margin-right: 8px;
+margin-bottom: 32px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.04em;
+color: #2E2F42;
+}
+
+input:hover {
+border: 1px solid #000000;
+}
+
+input:focus {
+border: 1px solid #4E75FF;
+}
+
+input:disabled {
+background: #FAFAFA;
+color: #808080;
+}
+
+button {
+padding: 8px 16px;
+gap: 10px;
+width: 75px;
+height: 40px;
+background: #4E75FF;
+border-radius: 8px;
+border: none;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+}
+
+button:disabled {
+background: #CFCFCF;
+color: #989898;
+
+}
+
+button:hover {
+background: #6C8CFF;
+}
+
+
+
+
+
+.flatpickr-calendar.open  {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px;
+width: 280px;
+position: absolute;
+height: 352px;
+background: #F5F5F5;
+border-radius: 8px;
+}
+
+.flatpickr-rContainer {
+width: 248px;
+height: 224px;
+margin-bottom: 12px;
+overflow: hidden;
+}
+
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+    position: unset !important;
+    /* padding: 0 !important;  */
+    height: 14px !important; /* !! */
+}
+
+.flatpickr-months {
+    margin-bottom: 18px;
+}
+
+.flatpickr-month {
+    position: unset;
+}
+
+.flatpickr-current-month {
+    font-size: unset !important;
+    left: unset !important;
+    position: unset !important;
+    width: unset !important;
+    padding-top: 10px !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months  {
+    appearance: none !important;  /* Remove default styling */
+    border: none !important;
+    background: none !important;
+    cursor: pointer;
+    padding-right: 20px !important; /* Space for arrow */
+font-weight: 600 !important;
+font-size: 16px !important;
+line-height: 20px !important;
+color: #333333 !important;
+letter-spacing: 0.04em !important;
+position:  relative !important;
+display: inline-block !important;
+}
+
+.numInputWrapper {
+    margin-left: 16px;
+}
+
+.numInput {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    color: #333333 !important;
+    letter-spacing: 0.04em !important;
+}
+
+
+.flatpickr-weekdays {
+    height: 24px;
+
+}
+
+span.flatpickr-weekday {
+    font-size: none;
+    color: #2E2F42 !important;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.flatpickr-days{
+width: unset !important; /* !!!!*/
+}
+
+.flatpickr-day {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.04em;
+border: none;
+color: #666666 !important;
+}
+
+.flatpickr-day.selected  {
+    color: #FFFFFF !important;
+}
+
+.prevMonthDay {
+    color: #c1c1c1 !important;
+}
+
+.nextMonthDay {
+    color: #c1c1c1 !important;
+}
+
+/* .prevMonthDay .nextMonthDay{
+color: #c1c1c1;
+} */
+    
+.dayContainer {
+min-width: unset !important;
+max-width: unset !important;
+} 
+
+
+.flatpickr-weekdays .flarpickr-weekday span {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #2E2F42 !important; /* not working */
+}
+
+.flatpickr-time input.flatpickr-hour {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+color: #333333;
+letter-spacing: 0.04em !important;
+}
+
+.flatpickr-time input.flatpickr-minute, .flatpickr-time input.flatpickr-second {
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600 !important;
+font-size: 16px;
+line-height: 20px;
+color: #333333;
+font-weight: none;
+}
+
+
+.timer {
+display: flex;
+justify-content: space-evenly;
+flex-direction: row;
+align-items: flex-start;
+gap: 24px;
+width: 365px;
+height: 72px;
+left: 156px;
+top: 108px;
+
+
+}
+
+.field {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+width: 55px;
+height: 72px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.value {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+letter-spacing: 0.04em;
+color: #2E2F42;
+}
+
+.label {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #2E2F42;
+
+}
+ 
+/* snackbar */
+
+.label-delay {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+width: 360px;
+height: 72px;
+font-weight: 400;
+letter-spacing: 0.04em;
+color: #2E2F42;
+}
+
+.label-delay .input {
+box-sizing: border-box;
+border: 1px solid #808080;
+border-radius: 4px;
+height: 40px ;
+width: 360px;
+margin: 0;
+padding: 0 16px 0 16px;
+gap: 0;
+}
+
+.label-delay .input:hover {
+border: 1px solid #000000;
+}
+
+.label-delay .input:focus {
+border: 1px solid #4E75FF;
+}
+/* 
+input::-webkit-inner-spin-button {
+   appearance: unset;
+    -webkit-user-select: auto;
+} */
+
+input[type='number']::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type='number']:hover::-webkit-inner-spin-button {
+    display: unset;
+}
+
+input[type='number']:focus::-webkit-inner-spin-button {
+    display: unset;
+}
+
+fieldset {
+box-sizing: border-box;
+width: 360px;
+height: 64px;
+border: 1px solid #808080;
+border-radius: 4px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.04em;
+color: #2E2F42;
+margin-top: 16px;
+}
+
+fieldset:hover {
+border: 1px solid #000000;
+}
+
+.inner {
+width: 264px;
+height: 32px;
+gap: 48px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 48px;
+margin: auto;
+}
+
+.label-fulfilled {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 14px;
+width: 104px;
+height: 32px;
+font-size: 16px;
+line-height: 24px;
+color: #2E2F42;
+}
+
+.input-fulfilled {
+width: 32px;
+height: 32px;
+margin: 0;
+box-sizing: border-box;
+width: 20px;
+height: 20px;
+border: 1px solid #757575;
+border-radius: 14px;
+}
+
+.label-rejected {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 14px;
+width: 104px;
+height: 32px;
+font-size: 16px;
+line-height: 24px;
+color: #2E2F42;
+}
+
+.input-rejected {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #757575;
+    border-radius: 14px;
+}
+
+.button {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 10px;
+position: absolute;
+width: 360px;
+height: 40px;
+background: #4E75FF;
+border-radius: 8px;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+margin-top: 24px;
+}
+
+.button:hover {
+background: #6C8CFF;
+}
