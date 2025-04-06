@@ -32,6 +32,7 @@ flatpickr('input#datetime-picker', {
 
 
 function onCloseFunc(selectedDate) {
+  const currentTime = new Date().getTime(); 
   if (selectedDate.getTime() > currentTime) {
     userSelectedDate = selectedDate.getTime()
     elements.button.disabled = false
@@ -52,10 +53,11 @@ function handleClick(evt) {
     clearInterval(countdownId)
   }
 
+  elements.input.disabled = true;
+
   countdownId = setInterval(() => {
     const currentTime = new Date().getTime()
     const remainingTime = userSelectedDate - currentTime
-    elements.input.disabled = true
 
     updateTimer(remainingTime);
 
